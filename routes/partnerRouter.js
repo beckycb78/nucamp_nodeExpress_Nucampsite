@@ -59,7 +59,7 @@ partnerRouter.route('/:partnerId')
         res.setHeader('Content-Type', 'application/json');
         res.json(partner);
     })
-    .catch(err => next(err));;
+    .catch(err => next(err));
 })
 .delete((req, res, next) => {
     Partner.findByIdAndDelete(req.params.partnerId)
